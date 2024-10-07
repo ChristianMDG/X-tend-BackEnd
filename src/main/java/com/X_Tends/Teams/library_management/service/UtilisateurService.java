@@ -59,13 +59,13 @@ public class UtilisateurService {
         utilisateurRepository.deleteById(id);
     }
 
-    public Utilisateur addEmpruntToUtilisateur(Long utilisateurId, Emprunt emprunt) {
+   /* public Utilisateur addEmpruntToUtilisateur(Long utilisateurId, Emprunt emprunt) {
         Utilisateur utilisateur = utilisateurRepository.findById(utilisateurId)
                 .orElseThrow(() -> new RuntimeException("Utilisateur not found"));
         Set<Emprunt> emprunts = utilisateur.getEmprunts();
         emprunts.add(emprunt);
         utilisateur.setEmprunts(emprunts); // Usage of setter
         return utilisateurRepository.save(utilisateur);
-    }
+    }*/
 
 }

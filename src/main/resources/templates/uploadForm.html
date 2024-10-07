@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Fetcher</title>
+</head>
+<body>
+<div id="image-container"></div>
+
+<script>
+    async function fetchImage(imageId) {
+        try {
+            const response = await fetch(`/images/${imageId}`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const blob = await response.blob();
+            const img = document.createElement('img');
+            img.src = URL.createObjectURL(blob);
+            img.alt = 'Fetched Image';
+            document.getElementById('image-container').appendChild(img);
+        } catch (error) {
+            console.error('An error occurred while fetching the image:', error);
+        }
+    }
+
+    // Fetch an image by ID
+    fetchImage(1);  // Replace 1 with the actual image ID you want to fetch
+</script>
+</body>
+</html>

@@ -56,5 +56,5 @@ public class AuteurController {
             return ResponseEntity.notFound().build();
         }
     }
-}
 
+}

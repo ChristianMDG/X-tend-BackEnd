@@ -39,7 +39,6 @@ public class AuteurService {
             return auteurRepository.save(auteur);
         });
     }
-
     public boolean deleteAuteur(Long id) {
         if (auteurRepository.existsById(id)) {
             auteurRepository.deleteById(id);

@@ -46,10 +46,5 @@ public class UtilisateurController {
         utilisateurService.deleteUtilisateur(id);
         return ResponseEntity.noContent().build();
     }
-    @PostMapping("/{utilisateurId}/emprunts")
-    public ResponseEntity<Utilisateur> addEmpruntToUtilisateur(@PathVariable("id") Long utilisateurId, @RequestBody Emprunt emprunt) {
-        Utilisateur updatedUtilisateur = utilisateurService.addEmpruntToUtilisateur(utilisateurId, emprunt);
-        return ResponseEntity.ok(updatedUtilisateur);
-    }
 }
 

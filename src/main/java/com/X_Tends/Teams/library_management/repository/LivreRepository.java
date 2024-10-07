@@ -13,8 +13,6 @@ import java.util.Optional;
 @Repository
 public interface LivreRepository extends JpaRepository<Livre, Long> {
     List<Livre> findByDisponible(boolean b);
-    // Utilisation d'un EntityGraph pour charger les auteurs de manière Eager
-    @EntityGraph(attributePaths = {"auteurs"})
-    Livre findWithAuteursById(Long id);
+
 
 }

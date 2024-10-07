@@ -1,6 +1,18 @@
 package com.X_Tends.Teams.library_management.service;
 
 import com.X_Tends.Teams.library_management.model.Emprunt;
+import com.X_Tends.Teams.library_management.model.Livre;
+import com.X_Tends.Teams.library_management.model.UserDto;
+import com.X_Tends.Teams.library_management.model.Utilisateur;
+import com.X_Tends.Teams.library_management.repository.EmpruntRepository;
+import com.X_Tends.Teams.library_management.repository.LivreRepository;
+import com.X_Tends.Teams.library_management.repository.UtilisateurRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.time.LocalDate;
+
+import com.X_Tends.Teams.library_management.model.Emprunt;
 import com.X_Tends.Teams.library_management.repository.EmpruntRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -42,4 +54,3 @@ public class EmpruntService {
     }
 
 }
-

@@ -3,6 +3,8 @@ package com.X_Tends.Teams.library_management.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import org.springframework.http.ResponseEntity;
+
 import java.util.Set;
 
 @Entity
@@ -65,4 +67,6 @@ public class Auteur {
                 ", prenom='" + prenom + '\'' +
                 '}';
     }
+
+
 }
